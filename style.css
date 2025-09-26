@@ -1,0 +1,16 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  border: solid;
+  border-width: 1;
+}
