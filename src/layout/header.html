@@ -1,21 +1,23 @@
 <header>
-  <div class="row">
+  <div class="">
     <nav
       class="navbar navbar-expand-sm navbar-dark px-3"
       style="background-color: black"
     >
-      <a class="navbar-brand" href="#">HK Engineering</a>
-      <button
-        class="navbar-toggler d-lg-none bg-white"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      ></button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+      <div class="flex-column w-100">
+        <a
+          style="font-size: 64px"
+          class="navbar-brand font-monospace fw-bold m-0 p-2"
+          href="#"
+          >HK</a
+        >
+        <span class="text-white p-0 m-0 font-monospace">Engineering</span>
+      </div>
+
+      <div class="collapse navbar-collapse w-50" id="collapsibleNavId">
+        <ul
+          class="navbar-nav border-start ms-2 border-white me-auto mt-2 mt-lg-0"
+        >
           <li class="nav-item">
             <a class="nav-link active" href="#" aria-current="page">Home</a>
           </li>
@@ -43,10 +45,10 @@
           <input
             class="form-control me-sm-2"
             type="text"
-            placeholder="Search"
+            placeholder="Buscar"
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
+            <i class="bi bi-search"></i>
           </button>
         </form>
       </div>
