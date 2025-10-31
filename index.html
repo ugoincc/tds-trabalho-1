@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale-1.0" />
   <title>HK Engineering™</title>
 
   <link rel="icon" type="image/png" href="/tds-trabalho-1/img/favicon-32x32.png" />
@@ -21,7 +21,7 @@
 </head>
   <body>
     <header id="cabecalho">
-      <div id="barra-superior">
+      <div id="barra-superior" class="container-fluid">
         <span class="telefone">+44 (0)1 923 287 687</span>
         <div class="icones-sociais">
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -32,25 +32,30 @@
       </div>
       </div>
 
-      <nav id="menu-principal">
-        <a href="#" id="logo">HK Engineering</a>
-
-        <ul class="lista-menu">
-          <li><a href="#">Vendas</a></li>
-          <li><a href="#">Restauração</a></li>
-          <li><a href="#">Manutenção</a></li>
-          <li><a href="#">Noticias</a></li>
-          <li><a href="#secao-formulario">Contato</a></li>
+      <nav id="menu-principal" class="container navbar navbar-expand-md navbar-dark">
+        <a href="#" id="logo" class="navbar-brand"> HK Engineering</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacao" aria-controls="menu-navegacao" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-navegacao">
+        <ul class="lista-menu navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Vendas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Restauração</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Manutenção</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#secao-formulario">Contato</a></li>
           </ul>
 
         <div class="area-pesquisa">
           <input type="search" placeholder="Buscar..." />
           <button><i class="fas fa-search"></i></button>
         </div>
+        </div>
       </nav>
     </header>
 
-    <div id="conteudo-principal">
+    <div id="conteudo-principal" class="container mt-4">
       <main id="coluna-esquerda">
         <section class="secao-hero">
           <h2>HK Engineering - Especialistas em carros</h2>
@@ -124,7 +129,7 @@
         <article class="item-noticia">
           <img
             src="/tds-trabalho-1/img/astormartin.jpg"
-            alt="Carro de corrida branco"
+            alt="Astor Martin"
           />
           <div class="texto-noticia">
             <h3>Scramble! HK Engineering</h3>
@@ -135,7 +140,7 @@
         <article class="item-noticia">
           <img
             src="/tds-trabalho-1/img/bmw_classica.jpg"
-            alt="Carro de corrida laranja"
+            alt="BMW classica"
           />
           <div class="texto-noticia">
             <h3>6 Horas de Fuji — WEC</h3>
@@ -145,76 +150,74 @@
       </aside>
     </div>
 
-    <section id="secao-formulario">
-      <div class="container-formulario">
-        <h2>Formulário de Contato</h2> 
-        <form action="#" method="POST">
-          <div class="mb-3">
-            <label for="nome" class="form-label">Nome Completo</label>
-            <input type="text" class="form-control" id="nome" required />
+    <section id="secao-formulario" class="container">
+      <h2>Formulário de Contato</h2> 
+      <form action="#" method="POST">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input type="text" class="form-control" id="nome" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+          <div class="col-md-6 mb-3">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" class="form-control" id="data" />
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required />
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="servico" class="form-label">Serviço</label>
+            <select id="servico" class="form-select">
+              <option selected>Escolha...</option>
+              <option value="vendas">Vendas</option>
+              <option value="restauracao">Restauração</option>
+            </select>
           </div>
-            <div class="col-md-6 mb-3">
-              <label for="data" class="form-label">Data</label>
-              <input type="date" class="form-control" id="data" />
-            </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="servico" class="form-label">Serviço</label>
-              <select id="servico" class="form-select">
-                <option selected>Escolha...</option>
-                <option value="vendas">Vendas</option>
-                <option value="restauracao">Restauração</option>
-              </select>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="modelo" class="form-label">Modelo</label>
-              <input class="form-control" list="modelosCarro" id="modelo" />
-              <datalist id="modelosCarro">
-                <option value="Ferrari F40"></option>
-                <option value="Porsche 911"></option>
-              </datalist>
-            </div>
+          <div class="col-md-6 mb-3">
+            <label for="modelo" class="form-label">Modelo</label>
+            <input class="form-control" list="modelosCarro" id="modelo" />
+            <datalist id="modelosCarro">
+              <option value="Ferrari F40"></option>
+              <option value="Porsche 911"></option>
+            </datalist>
           </div>
-          <div class="mb-3">
-            <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="mensagem" rows="3"></textarea>
+        </div>
+        <fieldset class="mb-3">
+          <legend class="col-form-label fs-6">Tipo</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tipoContato" id="radioVendas" checked />
+            <label class="form-check-label" for="radioVendas"> Vendas </label>
           </div>
-          <fieldset class="mb-3">
-            <legend class="col-form-label fs-6">Tipo</legend>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="tipoContato" id="radioVendas" checked />
-              <label class="form-check-label" for="radioVendas"> Vendas </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="tipoContato" id="radioSuporte" />
-              <label class="form-check-label" for="radioSuporte"> Suporte </label>
-            </div>
-          </fieldset>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="termos" required />
-            <label class="form-check-label" for="termos">Aceito os termos</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="tipoContato" id="radioSuporte" />
+            <label class="form-check-label" for="radioSuporte"> Suporte </label>
           </div>
-          <button type="submit" class="btn btn-danger">
-            Enviar
-          </button>
-        </form>
-      </div>
+        </fieldset>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="termos" required />
+          <label class="form-check-label" for="termos">Aceito os termos</label>
+        </div>
+        <button type="submit" class="btn btn-danger">
+          Enviar
+        </button>
+      </form>
     </section>
-
     <div class="aviso-mobile">
-      Atenção: Este site é melhor visualizado em telas maiores.
+        Atenção: Este site é melhor visualizado em telas maiores.
     </div>
-
     <footer id="rodape">
-      <p>&copy; 2025 HK Engineering™.</p>
+      <div class="container">
+        <p>&copy; 2025 HK Engineering™.</p>
+      </div>
     </footer>
 
     <a href="#" id="voltar-topo">^</a>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+  </body>
 </html>

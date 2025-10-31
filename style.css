@@ -1,4 +1,4 @@
-
+/* style.css (Ajustado) */
 body {
   background-color: #1a1a1a;
   color: #f0f0f0;
@@ -16,7 +16,7 @@ body {
 #barra-superior {
   background-color: #000;
   color: #adb5bd;
-  padding: 5px 5%; 
+  /* padding: 5px 5%; */ /* <-- REMOVIDO (Bootstrap 'container' controla) */
   display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -25,7 +25,7 @@ body {
 
 /* REQUISITO: 'display: inline-block' */
 .icones-sociais a {
-  display: inline-block; /* Faz os links se comportarem como blocos, mas na mesma linha */
+  display: inline-block; 
   color: #adb5bd;
   text-decoration: none;
   margin: 0 5px; 
@@ -35,12 +35,6 @@ body {
   color: #fff;
 }
 
-#menu-principal {
-  display: flex; /* Usando flex para alinhar o menu */
-  justify-content: space-between; /* Espaça os itens */
-  align-items: center;
-  padding: 10px 5%; 
-}
 
 #logo {
   font-size: 2rem;
@@ -53,69 +47,45 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; 
 }
 
-.lista-menu li {
-  margin: 0 0.5em; 
-}
-
-.lista-menu a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  padding: 5px 0;
-  border-bottom: 3px solid transparent;
-}
-
-.lista-menu a:hover {
-  border-bottom-color: #c00000;
-}
-
-/* REQUISITO: 'position: relative' */
 .area-pesquisa {
-  position: relative; /* O 'pai' precisa ser 'relative' */
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-/* REQUISITO: 'position: absolute' */
 .area-pesquisa button {
-  position: absolute; /* O 'filho' fica 'absolute' */
-  right: 5px; /* Posição da direita */
-  top: 5px;   /* Posição do topo */
   background-color: #c00000;
   border: none;
   color: white;
+  padding: 6px 12px;
   cursor: pointer;
-
-  padding: 2px 6px; 
 }
-
 .area-pesquisa input {
   background-color: #333;
   border: 1px solid #555;
   color: #fff;
-  /* O 'padding-right' cria o espaço dentro do input para o botão.
-  */
-  padding: 5px 40px 5px 10px; /* (topo, direita, baixo, esquerda) */
+  padding: 5px 40px 5px 10px; 
 }
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 #conteudo-principal {
-  display: flex; /* AQUI CRIAMOS AS 2 COLUNAS */
-  width: 90%;
-  margin: 20px auto; 
+  display: flex;
 }
 
 #coluna-esquerda {
-  flex: 3; /* A coluna da esquerda ocupa 3 partes */
-  padding-right: 1.5em; /* 'em' */
+  flex: 3; 
+  padding-right: 1.5em; 
 }
 
 #coluna-direita {
-  flex: 1; /* A coluna da direita ocupa 1 parte */
+  flex: 1; 
   border-left: 1px solid #333;
-  padding-left: 1.5em; /* 'em' */
+  padding-left: 1.5em; 
 }
 
 .imagem-principal {
@@ -129,8 +99,8 @@ body {
 
 /* --- Coluna da Direita (Notícias) --- */
 .item-noticia {
-  display: flex; /* Imagem ao lado do texto */
-  margin-bottom: 20px; /* 'px' */
+  display: flex; 
+  margin-bottom: 20px; 
 }
 
 .item-noticia img {
@@ -153,24 +123,44 @@ body {
 /* ===== FORMULÁRIO ===== */
 
 #secao-formulario {
-  width: 90%;
-  margin: 40px auto;
+  /* width: 90%; */       /* <-- REMOVIDO (Bootstrap 'container' controla) */
+  /* margin: 40px auto; */ /* <-- REMOVIDO (Bootstrap 'container' controla) */
   padding: 30px;
   background-color: #2a2a2a;
   border-radius: 8px;
+  margin-top: 2rem; /* Adicionado espaçamento */
+  margin-bottom: 2rem; /* Adicionado espaçamento */
 }
 
 /* Classes do Bootstrap que estamos sobrescrevendo */
 #secao-formulario .form-label {
   color: #f0f0f0;
 }
+
+/* AJUSTADO: Esta regra geral NÃO mexe mais na largura */
 #secao-formulario .form-control,
 #secao-formulario .form-select {
   background-color: #333;
   border-color: #555;
   color: #fff;
+  /* width: 60%; */ /* <-- REMOVIDO DAQUI */
+}
+
+/* ADICIONADO: Regra específica para diminuir APENAS os campos
+   que não estão em colunas (os que estão direto no <form>) */
+#secao-formulario form > .mb-3 .form-control,
+#secao-formulario form > .col-md-6.mb-3 .form-control {
   width: 60%;
 }
+
+/* Precisamos garantir que os campos dentro de .row 
+   tenham 100% de largura (para preencher os 50% da coluna) */
+#secao-formulario .row .form-control,
+#secao-formulario .row .form-select {
+  width: 100%;
+}
+
+
 #secao-formulario .form-control:focus {
   background-color: #444;
   border-color: #c00000;
@@ -182,14 +172,13 @@ body {
   background-color: #000;
   color: #adb5bd;
   text-align: center;
-  padding: 2rem 0; /* 'rem' */
+  padding: 2rem 0; 
   margin-top: 30px;
   font-size: 0.9rem;
 }
 
 /* ===== ELEMENTOS DOS REQUISITOS ===== */
 
-/* REQUISITO: 'display: none' */
 .aviso-mobile {
   display: none; /* Por padrão, o aviso está escondido */
   background-color: #ffc107;
@@ -201,7 +190,7 @@ body {
 
 /* REQUISITO: 'position: fixed' */
 #voltar-topo {
-  position: fixed; /* Fica fixo na tela */
+  position: fixed; 
   bottom: 20px;
   right: 20px;
   background-color: #c00000;
@@ -209,7 +198,7 @@ body {
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 40px; /* Alinha o texto (^) verticalmente */
+  line-height: 40px; 
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.5rem;
@@ -236,8 +225,9 @@ body {
     display: block; 
   }
 
-  /* Esconde o menu principal e a pesquisa */
-  .lista-menu, .area-pesquisa {
-    display: none; 
+  /* AJUSTADO: Faz os campos de formulário terem 100% em telas pequenas */
+  #secao-formulario form > .mb-3 .form-control,
+  #secao-formulario form > .col-md-6.mb-3 .form-control {
+    width: 100%;
   }
 }
