@@ -16,7 +16,6 @@ body {
 #barra-superior {
   background-color: #000;
   color: #adb5bd;
-  /* padding: 5px 5%; */ /* <-- REMOVIDO (Bootstrap 'container' controla) */
   display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -40,36 +39,34 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #c00000;
-  text-decoration: none;
 }
 
 .lista-menu {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .area-pesquisa {
   display: flex;
-  align-items: center;
   background-color: #333;
-  border: 1px solid #555;
+  border: 1px solid #555; 
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .area-pesquisa button {
   background-color: #c00000;
-  border: none;
+  border: none; 
   color: white;
   padding: 6px 12px;
   cursor: pointer;
 }
+
 .area-pesquisa input {
-  background-color: #333;
-  border: 1px solid #555;
+  flex: 1; /* Faz o input esticar e ocupar o espaço restante */
+  background-color: #333; 
+  border: none; 
   color: #fff;
-  padding: 5px 40px 5px 10px; 
+  padding: 5px 10px;
 }
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
@@ -83,7 +80,7 @@ body {
 }
 
 #coluna-direita {
-  flex: 1; 
+  flex: 1;
   border-left: 1px solid #333;
   padding-left: 1.5em; 
 }
@@ -93,8 +90,24 @@ body {
   border-radius: 5px;
 }
 
-.secao-hero h2 {
+.secao-principal h2 {
   color: #c00000;
+}
+
+.hr{
+  border-top: 1px solid #555;
+}
+
+.secao-processo{
+  margin-top: 30px;
+}
+
+.secao-horarios {
+  margin-top: 20px;
+}
+
+.secao-especialidades {
+  margin-top: 30px;
 }
 
 /* --- Coluna da Direita (Notícias) --- */
@@ -123,27 +136,22 @@ body {
 /* ===== FORMULÁRIO ===== */
 
 #secao-formulario {
-  /* width: 90%; */       /* <-- REMOVIDO (Bootstrap 'container' controla) */
-  /* margin: 40px auto; */ /* <-- REMOVIDO (Bootstrap 'container' controla) */
   padding: 30px;
   background-color: #2a2a2a;
   border-radius: 8px;
-  margin-top: 2rem; /* Adicionado espaçamento */
-  margin-bottom: 2rem; /* Adicionado espaçamento */
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
 }
 
-/* Classes do Bootstrap que estamos sobrescrevendo */
 #secao-formulario .form-label {
   color: #f0f0f0;
 }
 
-/* AJUSTADO: Esta regra geral NÃO mexe mais na largura */
 #secao-formulario .form-control,
 #secao-formulario .form-select {
   background-color: #333;
   border-color: #555;
   color: #fff;
-  /* width: 60%; */ /* <-- REMOVIDO DAQUI */
 }
 
 /* ADICIONADO: Regra específica para diminuir APENAS os campos
@@ -167,7 +175,7 @@ body {
   color: #fff;
 }
 
-/* ===== RODAPÉ ===== */
+
 #rodape {
   background-color: #000;
   color: #adb5bd;
@@ -177,10 +185,9 @@ body {
   font-size: 0.9rem;
 }
 
-/* ===== ELEMENTOS DOS REQUISITOS ===== */
 
 .aviso-mobile {
-  display: none; /* Por padrão, o aviso está escondido */
+  display: none; 
   background-color: #ffc107;
   color: #000;
   text-align: center;
@@ -207,7 +214,7 @@ body {
   background-color: #a00000;
 }
 
-/* Media Query para telas pequenas (celulares) */
+/* Para telas pequenas (celulares) */
 @media (max-width: 768px) {
   /* Faz as colunas ficarem uma em cima da outra */
   #conteudo-principal {
@@ -229,5 +236,23 @@ body {
   #secao-formulario form > .mb-3 .form-control,
   #secao-formulario form > .col-md-6.mb-3 .form-control {
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Faz a imagem e o texto da notícia ficarem empilhados
+    (um em cima do outro) em vez de lado a lado.
+  */
+  .item-noticia {
+    flex-direction: column;
+  }
+
+  /* Faz a imagem da notícia ocupar 100% da largura 
+    e ter um espaço abaixo dela.
+  */
+  .item-noticia img {
+    width: 100%;       /* Imagem ocupa toda a largura da coluna */
+    margin-right: 0;   /* Remove a margem da direita */
+    margin-bottom: 10px; /* Adiciona uma margem abaixo */
   }
 }
