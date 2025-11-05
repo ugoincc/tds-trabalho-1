@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Função para carregar um componente HTML em um elemento
 function loadComponent(url, elementId) {
   fetch(url)
     .then((response) => response.text())
@@ -17,7 +16,6 @@ function loadComponent(url, elementId) {
     });
 }
 
-// Carrega os arquivos de layout
 document.addEventListener("DOMContentLoaded", function () {
   loadComponent("./src/layout/header.html", "header-placeholder");
   loadComponent("./src/layout/content.html", "content-placeholder");

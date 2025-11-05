@@ -1,57 +1,51 @@
-<header>
-  <div class="">
-    <nav
-      class="navbar navbar-expand-sm navbar-dark px-3"
-      style="background-color: black"
-    >
-      <div class="flex-column w-100">
-        <a
-          style="font-size: 64px"
-          class="navbar-brand font-monospace fw-bold m-0 p-2"
-          href="#"
-          >HK</a
-        >
-        <span class="text-white p-0 m-0 font-monospace">Engineering</span>
-      </div>
-
-      <div class="collapse navbar-collapse w-50" id="collapsibleNavId">
-        <ul
-          class="navbar-nav border-start ms-2 border-white me-auto mt-2 mt-lg-0"
-        >
-          <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Estoque</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdownId"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Serviços</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Avaliação</a>
-              <a class="dropdown-item" href="#">Manutenção</a>
-              <a class="dropdown-item" href="#">Seguro</a>
-            </div>
-          </li>
-        </ul>
-        <form class="d-flex my-2 my-lg-0">
-          <input
-            class="form-control me-sm-2"
-            type="text"
-            placeholder="Buscar"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            <i class="bi bi-search"></i>
-          </button>
-        </form>
-      </div>
-    </nav>
+<header id="cabecalho">
+  <div id="barra-superior" class="container-fluid">
+    <span class="telefone">+44 (0)1 923 287 687</span>
+    <div class="icones-sociais">
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
   </div>
+
+  <nav
+    id="menu-principal"
+    class="container navbar navbar-expand-md navbar-dark"
+  >
+    <a href="#" id="logo" class="navbar-brand"> HK Engineering</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menu-navegacao"
+      aria-controls="menu-navegacao"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu-navegacao">
+      <ul class="lista-menu navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Vendas</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Restauração</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Manutenção</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#secao-formulario">Contato</a>
+        </li>
+      </ul>
+
+      <div class="area-pesquisa">
+        <input type="search" placeholder="Buscar..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </nav>
 </header>

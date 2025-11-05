@@ -1,32 +1,104 @@
-<div class="content-container">
-  <h1 id="title">Hello, World!</h1>
+<div id="conteudo-principal" class="container mt-4">
+  <main id="coluna-esquerda">
+    <section class="secao-principal">
+      <h2>HK Engineering - Especialistas em carros</h2>
+      <p>
+        Somos especializados em todos os aspectos do setor automotivo. Desde a
+        venda de veículos de alto padrão até a restauração completa e a
+        manutenção de carros clássicos e modernos.
+        <a href="#">Saiba mais...</a>
+      </p>
+      <img
+        src="../../img/koenigsegg.jpg"
+        alt="Carros na oficina"
+        class="imagem-principal"
+      />
+    </section>
 
-  <button class="btn btn-primary">
-    Notifications
-    <span class="badge bg-primary">12</span>
-  </button>
+    <section class="secao-especialidades">
+      <h3>Nossas Especialidades</h3>
+      <ul>
+        <li>Restauração de Carros Clássicos</li>
+        <li>Manutenção de Superesportivos</li>
+        <li>Importação e Venda de Veículos</li>
+        <li>Customização de Interiores e Pintura</li>
+      </ul>
+    </section>
 
-  <p class="text-decoration-underline">
-    Este é um exemplo simples utilizando HTML, CSS, JavaScript e Bootstrap.
-  </p>
-  <button id="button" class="btn btn-primary">Clique em mim</button>
+    <section class="secao-processo">
+      <h3>Nosso Processo</h3>
+      <ol>
+        <li>Avaliação e Desmontagem Completa</li>
+        <li>Funilaria e Preparação do Chassis</li>
+        <li>Pintura e Acabamento</li>
+        <li>Remontagem e Testes Finais</li>
+      </ol>
+    </section>
+  </main>
 
-  <div class="row">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">Title</h3>
-          <p class="card-text">Text</p>
-        </div>
+  <aside id="coluna-direita">
+    <section class="secao-horarios">
+      <h3>Horários de Atentimento</h3>
+
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda - Sexta</td>
+            <td>08:00 - 18:00</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>09:00 - 13:00</td>
+          </tr>
+          <tr>
+            <td>Domingo</td>
+            <td>Fechado</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr />
+
+    <h2>Últimas Notícias</h2>
+
+    <article class="item-noticia">
+      <img src="../../img/astormartin.jpg" alt="Astor Martin" />
+      <div class="texto-noticia">
+        <h3>Scramble! HK Engineering</h3>
+        <p>Ontem, membros da HK team... <a href="#">Saiba mais...</a></p>
       </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">Title</h3>
-          <p class="card-text">Text</p>
-        </div>
+    </article>
+
+    <article class="item-noticia">
+      <img src="../../img/bmw_classica.jpg" alt="BMW classica" />
+      <div class="texto-noticia">
+        <h3>6 Horas de Fuji — WEC</h3>
+        <p>
+          Sob a sombra do Monte Fuji, o Fuji Speedway...
+          <a href="#">Saiba mais...</a>
+        </p>
       </div>
-    </div>
-  </div>
+    </article>
+    <section class="secao-video" style="margin-top: 20px">
+      <h3>Vídeo em Destaque</h3>
+
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/Kfj1SJBaeuQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </section>
+  </aside>
 </div>
