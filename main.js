@@ -2,25 +2,25 @@ const availableCars = [
   {
     make: "Porsche",
     modelYear: "911 Turbo S - 2026",
-    description: "description",
+    description: "KM: 3.032 - Chalk",
     imagePath: "./img/2026-911.jpg",
   },
   {
     make: "Audi",
     modelYear: "R8 Coupe - 2019",
-    description: "description",
+    description: "KM: 25.299 - Deep Blue",
     imagePath: "./img/2019-r8-coupe.jpg",
   },
   {
     make: "Aston Martin",
     modelYear: "Vantage - 2025",
-    description: "description",
+    description: "KM: 8.600 - Tanzanite Yellow",
     imagePath: "./img/2025-amVantage.jpg",
   },
   {
     make: "Mercedes-Benz",
     modelYear: "AMG GT - 2024",
-    description: "description",
+    description: "KM: 4.121 - Pristine Red",
     imagePath: "./img/2024-amg-gt.jpg",
   },
 ];
@@ -32,14 +32,17 @@ function populateEstoque() {
   const carList = availableCars.map((car) => {
     //Componente card para cada carro
     return `
-    <div class="card" style="width: 14rem">
-    <img class="card-img-top" src=${car.imagePath} alt="Card image cap" />
-    <div class="card-body bg-secondary">
-    <h4 class=text-white>${car.make}</h4>
-    <h6 class="card-subtitle mb-2 text-body-secondary">${car.modelYear}</h6>
-    <p class="card-text">${car.description}</p>
+    <div class="col-3">
+      <div class="card h-100" style="background-color: #2a2a2a; border-color: #555;">
+        <img class="card-img-top" src=${car.imagePath} alt="${car.make}" />
+        <div class="card-body">
+          <h4 style="color: #c00000;">${car.make}</h4>
+          <h6 class="card-subtitle mb-2 text-light">${car.modelYear}</h6>
+          <p class="card-text text-light">${car.description}</p>
+        </div>
+      </div>
     </div>
-    </div>`;
+  `;
   });
   const finalHtml = carList.join("");
   estoqueContainer.innerHTML = finalHtml;
