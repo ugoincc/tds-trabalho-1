@@ -1,33 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const button = document.getElementById("button");
-  const title = document.getElementById("title");
-
-  button.addEventListener("click", function () {
-    title.textContent = "Bem-vindo ao Exemplo!";
-    alert("Você clicou no botão!");
-  });
-});
-
-function loadComponent(url, elementId) {
-  fetch(url)
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById(elementId).innerHTML = data;
-    });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  loadComponent("./src/layout/header.html", "header-placeholder");
-  loadComponent("./src/layout/content.html", "content-placeholder");
-  loadComponent("./src/layout/footer.html", "footer-placeholder");
-  loadComponent(
-    "./src/layout/content.html",
-    "content-placeholder",
-    populateEstoque
-  );
-  loadComponent("./src/layout/footer.html", "footer-placeholder");
-});
-
 const availableCars = [
   {
     make: "Porsche",
@@ -55,6 +25,7 @@ const availableCars = [
   },
 ];
 
+//Function Declaration
 function populateEstoque() {
   const estoqueContainer = document.getElementById("estoqueContainer");
 
@@ -74,7 +45,8 @@ function populateEstoque() {
   estoqueContainer.innerHTML = finalHtml;
 }
 
-function loadComponent(url, elementId, callback) {
+//Function Expression
+const loadComponent = function (url, elementId, callback) {
   fetch(url)
     .then((response) => response.text())
     .then((data) => {
@@ -87,4 +59,17 @@ function loadComponent(url, elementId, callback) {
         callback();
       }
     });
-}
+};
+
+//Evento de Janela
+document.addEventListener("DOMContentLoaded", function () {
+  loadComponent("./src/layout/header.html", "header-placeholder");
+  loadComponent("./src/layout/content.html", "content-placeholder");
+  loadComponent(
+    "./src/layout/content.html",
+    "content-placeholder",
+    populateEstoque
+  );
+  loadComponent("./src/layout/footer.html", "footer-placeholder");
+  loadComponent("./src/components/contactCard.html", "modal-placeholder");
+});
