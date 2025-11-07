@@ -16,24 +16,23 @@ body {
 #barra-superior {
   background-color: #000;
   color: #adb5bd;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem; 
+  font-size: 0.85rem;
 }
 
 /* REQUISITO: 'display: inline-block' */
 .icones-sociais a {
-  display: inline-block; 
+  display: inline-block;
   color: #adb5bd;
   text-decoration: none;
-  margin: 0 5px; 
+  margin: 0 5px;
   padding: 3px;
 }
 .icones-sociais a:hover {
   color: #fff;
 }
-
 
 #logo {
   font-size: 2rem;
@@ -46,16 +45,24 @@ body {
   padding: 0;
 }
 
+.grid-list {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0;
+  list-style: none;
+}
+
 .area-pesquisa {
   display: flex;
   background-color: #333;
-  border: 1px solid #555; 
+  border: 1px solid #555;
   border-radius: 4px;
 }
 
 .area-pesquisa button {
   background-color: #c00000;
-  border: none; 
+  border: none;
   color: white;
   padding: 6px 12px;
   cursor: pointer;
@@ -63,8 +70,8 @@ body {
 
 .area-pesquisa input {
   flex: 1; /* Faz o input esticar e ocupar o espaço restante */
-  background-color: #333; 
-  border: none; 
+  background-color: #333;
+  border: none;
   color: #fff;
   padding: 5px 10px;
 }
@@ -75,14 +82,14 @@ body {
 }
 
 #coluna-esquerda {
-  flex: 3; 
-  padding-right: 1.5em; 
+  flex: 3;
+  padding-right: 1.5em;
 }
 
 #coluna-direita {
   flex: 1;
   border-left: 1px solid #333;
-  padding-left: 1.5em; 
+  padding-left: 1.5em;
 }
 
 .imagem-principal {
@@ -94,11 +101,11 @@ body {
   color: #c00000;
 }
 
-.hr{
+.hr {
   border-top: 1px solid #555;
 }
 
-.secao-processo{
+.secao-processo {
   margin-top: 30px;
 }
 
@@ -112,8 +119,8 @@ body {
 
 /* --- Coluna da Direita (Notícias) --- */
 .item-noticia {
-  display: flex; 
-  margin-bottom: 20px; 
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .item-noticia img {
@@ -139,8 +146,8 @@ body {
   padding: 30px;
   background-color: #2a2a2a;
   border-radius: 8px;
-  margin-top: 2rem; 
-  margin-bottom: 2rem; 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #secao-formulario .form-label {
@@ -168,26 +175,23 @@ body {
   width: 100%;
 }
 
-
 #secao-formulario .form-control:focus {
   background-color: #444;
   border-color: #c00000;
   color: #fff;
 }
 
-
 #rodape {
   background-color: #000;
   color: #adb5bd;
   text-align: center;
-  padding: 2rem 0; 
+  padding: 2rem 0;
   margin-top: 30px;
   font-size: 0.9rem;
 }
 
-
 .aviso-mobile {
-  display: none; 
+  display: none;
   background-color: #ffc107;
   color: #000;
   text-align: center;
@@ -197,7 +201,7 @@ body {
 
 /* REQUISITO: 'position: fixed' */
 #voltar-topo {
-  position: fixed; 
+  position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #c00000;
@@ -205,7 +209,7 @@ body {
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 40px; 
+  line-height: 40px;
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.5rem;
@@ -220,16 +224,16 @@ body {
   #conteudo-principal {
     flex-direction: column;
   }
-  
+
   #coluna-direita {
     border-left: none;
     padding-left: 0;
     margin-top: 20px;
   }
-  
+
   /* Mostra o aviso que estava escondido */
   .aviso-mobile {
-    display: block; 
+    display: block;
   }
 
   /* AJUSTADO: Faz os campos de formulário terem 100% em telas pequenas */
@@ -251,8 +255,8 @@ body {
     e ter um espaço abaixo dela.
   */
   .item-noticia img {
-    width: 100%;       /* Imagem ocupa toda a largura da coluna */
-    margin-right: 0;   /* Remove a margem da direita */
+    width: 100%; /* Imagem ocupa toda a largura da coluna */
+    margin-right: 0; /* Remove a margem da direita */
     margin-bottom: 10px; /* Adiciona uma margem abaixo */
   }
 }
