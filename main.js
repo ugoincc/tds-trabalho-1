@@ -32,7 +32,7 @@ function populateEstoque() {
   const carList = availableCars.map((car) => {
     //Componente card para cada carro
     return `
-    <div class="col-3">
+    <div class="col-lg-3 col-md-4 g-2">
       <div class="card h-100" style="background-color: #2a2a2a; border-color: #555;">
         <img class="card-img-top" src=${car.imagePath} alt="${car.make}" />
         <div class="card-body">
